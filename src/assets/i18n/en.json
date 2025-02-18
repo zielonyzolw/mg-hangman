@@ -1,0 +1,14 @@
+{
+  "GAME": {
+    "TITLE": "Hangman Game",
+    "START": "Start Game",
+    "STAGE": "Stage",
+    "WORD": "Word",
+    "ERRORS": "Errors",
+    "NEXT": "Well done! Proceed to the next stage!",
+    "RETRY": "Play Again",
+    "WIN": "Congratulations! You finished the game in",
+    "SECONDS": "seconds!",
+    "LOST": "You lost! Please try again."
+  }
+}

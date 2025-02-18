@@ -1,0 +1,23 @@
+<div class="custom-modal-container">
+  <h2
+    class="custom-modal-container__heading"
+    *ngIf="data.success; else lostGame"
+  >
+    {{ 'GAME.WIN' | translate }} {{ data.time }} {{ 'GAME.SECONDS' | translate }}
+  </h2>
+
+  <ng-template #lostGame>
+    <h2 class="custom-modal-container__heading custom-modal-container__heading--lost">
+      {{ 'GAME.LOST' | translate }}
+    </h2>
+  </ng-template>
+
+  <button
+    mat-raised-button
+    color="primary"
+    class="custom-modal-container__button"
+    (click)="restartGame()"
+  >
+    {{ 'GAME.RETRY' | translate }}
+  </button>
+</div>

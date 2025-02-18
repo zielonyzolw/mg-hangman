@@ -1,0 +1,27 @@
+<div class="game">
+  <h1 class="game__title">{{ 'GAME.TITLE' | translate }}</h1>
+  <p class="game__stage">{{ 'GAME.STAGE' | translate }} {{ gameData.currentStage + 1 }} / 5</p>
+  <p class="game__word">
+    {{ 'GAME.WORD' | translate }}:
+    <strong>{{ gameData.getMaskedWord() }}</strong>
+  </p>
+  <p class="game__errors">
+    {{ 'GAME.ERRORS' | translate }}: {{ gameData.wrongAttempts }} / 6
+  </p>
+
+  <div class="game__letters">
+    <button
+      *ngFor="let letter of alphabet"
+      class="game__letter"
+      (click)="guessLetter(letter)"
+      [disabled]="gameData.guessedLetters.includes(letter)"
+    >
+      {{ letter }}
+    </button>
+  </div>
+
+  <p class="game__hint"
+     *ngIf="gameData.isWordGuessed()">
+    {{ 'GAME.NEXT' | translate }}
+  </p>
+</div>

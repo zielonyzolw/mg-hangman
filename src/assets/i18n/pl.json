@@ -1,0 +1,14 @@
+{
+  "GAME": {
+    "TITLE": "Gra w Wisielca",
+    "START": "Rozpocznij grę",
+    "STAGE": "Etap",
+    "WORD": "Słowo",
+    "ERRORS": "Błędy",
+    "NEXT": "Brawo! Przechodzisz do następnego etapu!",
+    "RETRY": "Zagraj ponownie",
+    "WIN": "Gratulacje! Ukończyłeś grę w",
+    "SECONDS": "sekundy!",
+    "LOST": "Niestety nie odgadłeś hasła! Spróbuj ponownie."
+  }
+}
