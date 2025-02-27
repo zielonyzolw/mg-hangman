@@ -1,13 +1,23 @@
+$primary-color: #3498db;
+$secondary-color: #9b59b6;
+$text-color: white;
+$button-text-color: #333;
+$button-bg: #fff;
+$button-hover-bg: #f1c40f;
+$disabled-bg: #ccc;
+$box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+$border-radius: 10px;
+
 .game {
   text-align: center;
   font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #3498db, #9b59b6);
-  color: white;
+  background: linear-gradient(135deg, $primary-color, $secondary-color);
+  color: $text-color;
   padding: 30px;
-  border-radius: 10px;
+  border-radius: $border-radius;
   max-width: 500px;
   margin: auto;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: $box-shadow;
 
   &__title {
     margin-bottom: 15px;
@@ -35,8 +45,8 @@
   }
 
   &__letter {
-    background: #fff;
-    color: #333;
+    background: $button-bg;
+    color: $button-text-color;
     border: none;
     padding: 10px 15px;
     font-size: 18px;
@@ -45,11 +55,11 @@
     border-radius: 5px;
 
     &:hover {
-      background: #f1c40f;
+      background: $button-hover-bg;
     }
 
     &:disabled {
-      background-color: #ccc;
+      background-color: $disabled-bg;
       cursor: not-allowed;
     }
   }
