@@ -4,35 +4,9 @@ html, body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-.custom-modal-container {
-  padding: 20px;
-  background: #fff;
-  border-radius: 10px;
-  text-align: center;
-}
-
-.custom-modal-container__heading {
-  font-size: 20px;
-  color: #333;
-  margin-bottom: 15px;
-}
-
-.custom-modal-container__heading--lost {
-  color: #e74c3c;
-}
-
-.custom-modal-container__button {
-  margin-top: 15px;
-  background-color: #f39c12;
-  color: #fff;
-  border: none;
-  padding: 10px 15px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-}
-
-.custom-modal-container__button:hover {
-  background-color: #e67e22;
+.end-modal-container .mat-mdc-dialog-container {
+  background-color: white !important;
+  border-radius: 12px !important;
+  padding: 24px !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2) !important;
 }

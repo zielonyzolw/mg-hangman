@@ -49,7 +49,7 @@ export class GameComponent implements OnInit {
 
     this.dialog.open(EndModalComponent, {
       data: { time: gameTime, success: wasGameWon },
-      panelClass: 'custom-modal-container'
+      panelClass: 'end-modal-container'
     });
   }
 

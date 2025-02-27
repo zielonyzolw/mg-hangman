@@ -1,0 +1,37 @@
+$button-color: #f39c12;
+$button-color-hover: #e67e22;
+$text-color: #333;
+$error-color: #e74c3c;
+$modal-bg: white;
+
+.end-modal {
+  background: $modal-bg;
+  text-align: center;
+  padding: 20px;
+
+  &__heading {
+    font-size: 20px;
+    color: $text-color;
+    margin-bottom: 15px;
+
+    &--lost {
+      color: $error-color;
+    }
+  }
+
+  &__button {
+    margin-top: 15px;
+    background-color: $button-color;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: $button-color-hover;
+    }
+  }
+}

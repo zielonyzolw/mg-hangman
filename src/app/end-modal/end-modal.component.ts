@@ -11,8 +11,8 @@ import { GameService } from '../services/game.service';
   templateUrl: './end-modal.component.html',
   styleUrls: ['./end-modal.component.scss'],
   imports: [CommonModule, TranslateModule],
-  encapsulation: ViewEncapsulation.None
 })
+
 export class EndModalComponent {
   private router = inject(Router);
   private gameService = inject(GameService);
