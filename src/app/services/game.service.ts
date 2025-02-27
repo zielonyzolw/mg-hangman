@@ -33,13 +33,14 @@ export class GameService {
     this.gameStartTime = Date.now();
     sessionStorage.setItem('gameStarted', 'true');
     this.gameWon = false;
+
+    console.log('🔄 Start gry. Aktualne słowo:', this.getCurrentWord());
   }
 
   setWords(words: string[]): void {
     this.words = words;
     this.selectedWords = this.shuffleArray(words).slice(0, 5);
     console.log('🔍 Wybrane słowa (kolejność):', this.selectedWords);
-    console.log('🔍 Aktualne słowo:', this.getCurrentWord());
   }
 
   getCurrentWord(): string {
@@ -82,6 +83,7 @@ export class GameService {
       this.currentStage++;
       this.guessedLetters = [];
       this.wrongAttempts = 0;
+      console.log('🆕 Następny etap! Aktualne słowo:', this.getCurrentWord());
     } else {
       sessionStorage.removeItem('gameStarted');
       this.gameWon = true;
