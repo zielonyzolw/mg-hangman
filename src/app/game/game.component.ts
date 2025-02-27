@@ -18,6 +18,7 @@ export class GameComponent implements OnInit {
   private translateService = inject(TranslateService);
 
   alphabet: string[] = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+  maskedWord: string = '';
 
   constructor() {
     this.translateService.use('pl');
@@ -28,6 +29,7 @@ export class GameComponent implements OnInit {
       next: (data) => {
         this.gameService.setWords(data.words);
         this.gameService.startGame();
+        this.updateMaskedWord();
       },
       error: (err) => console.error(err)
     });
@@ -41,6 +43,11 @@ export class GameComponent implements OnInit {
 
   guessLetter(letter: string): void {
     this.gameService.guessLetter(letter);
+    this.updateMaskedWord();
+  }
+
+  updateMaskedWord(): void {
+    this.maskedWord = this.gameService.getMaskedWord();
   }
 
   openEndModal(): void {

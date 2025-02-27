@@ -3,7 +3,7 @@
   <p class="game__stage">{{ 'GAME.STAGE' | translate }} {{ gameData.currentStage + 1 }} / 5</p>
   <p class="game__word">
     {{ 'GAME.WORD' | translate }}:
-    <strong>{{ gameData.getMaskedWord() }}</strong>
+    <strong>{{ maskedWord }}</strong>
   </p>
   <p class="game__errors">
     {{ 'GAME.ERRORS' | translate }}: {{ gameData.wrongAttempts }} / 6
